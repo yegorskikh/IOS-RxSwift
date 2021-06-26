@@ -1,13 +1,14 @@
 # IOS-RxSwift
 
 **RxSwift** - это библиотека для составления асинхронного и основанного на событиях кода с использованием наблюдаемых последовательностей и операторов функционального стиля, что позволяет параметризовать выполнение через планировщики.
-
+<br> </br>
 ### Contents:
 > Section I: Getting Started with RxSwift
 - Chapter 1: Hello, RxSwift! 
 - Chapter 2: Observables
 - Chapter 3: Subjects
 - Chapter 4: Observables & Subjects in Practice
+<br> </br>
 > Section II: Operators & Best Practices
 - Chapter 5: Filtering Operators
 - Chapter 6: Filtering Operators in Practice
@@ -16,6 +17,7 @@
 - Chapter 9: Combining Operators
 - Chapter 10: Combining Operators in Practice
 - Chapter 11: Time-Based Operators
+<br> </br>
 > Section III: iOS Apps with RxCocoa 
 - Chapter 12: Beginning RxCocoa
 - Chapter 13: Intermediate RxCocoa
@@ -24,6 +26,7 @@
 - Chapter 15: Intro to Schedulers
 - Chapter 16: Testing with RxTest
 - Chapter 17: Creating Custom Reactive Extensions
+<br> </br>
 > Section V: RxSwift Community Cookbook
 - Chapter 18: Table & Collection Views
 - Chapter 19: RxSwiftExt
