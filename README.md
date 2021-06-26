@@ -21,6 +21,7 @@
 > Section III: iOS Apps with RxCocoa 
 - Chapter 12: Beginning RxCocoa
 - Chapter 13: Intermediate RxCocoa
+<br> </br>
 > Section IV: Intermediate RxSwift/RxCocoa
 - Chapter 14: Error Handling in Practice
 - Chapter 15: Intro to Schedulers
