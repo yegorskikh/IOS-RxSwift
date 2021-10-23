@@ -2,10 +2,10 @@
 
 **RxSwift** - это библиотека для составления асинхронного и основанного на событиях кода с использованием наблюдаемых последовательностей и операторов функционального стиля, что позволяет параметризовать выполнение через планировщики.
 <br> </br>
-### Contents:
+## Overview
 > Section I: Getting Started with RxSwift
 - Chapter 1: Hello, RxSwift! 
-- Chapter 2: Observables
+- Chapter 2: [Observables]()
 - Chapter 3: Subjects
 - Chapter 4: Observables & Subjects in Practice
 <br> </br>
@@ -38,3 +38,8 @@
 > Section VI: Putting It All Together
 - Chapter 24: MVVM with RxSwift.
 - Chapter 25: Building a Complete RxSwift App 
+
+# Overview Extended
+## Observables
+### Key Points 
+- [example](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%201/02-observable-pg/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
