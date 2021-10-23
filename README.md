@@ -5,7 +5,7 @@
 ## Overview
 > Section I: Getting Started with RxSwift
 - Chapter 1: Hello, RxSwift! 
-- Chapter 2: [Observables]()
+- Chapter 2: [Observables](https://github.com/yegorskikh/IOS-RxSwift/blob/main/README.md#observables)
 - Chapter 3: Subjects
 - Chapter 4: Observables & Subjects in Practice
 <br> </br>
