@@ -1,5 +1,6 @@
 import UIKit
 import Photos
+import RxSwift
 
 class PhotosViewController: UICollectionViewController {
   
@@ -21,6 +22,12 @@ class PhotosViewController: UICollectionViewController {
     return PHAsset.fetchAssets(with: allPhotosOptions)
   }
   
+  private let selectedPhotosSubject = PublishSubject<UIImage>()
+  
+  var selectedPhotos: Observable<UIImage> {
+    return selectedPhotosSubject.asObservable()
+  }
+  
   // MARK: View Controller
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,7 +36,7 @@ class PhotosViewController: UICollectionViewController {
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    
+    self.selectedPhotosSubject.onCompleted()
   }
   
   // MARK: UICollectionView
@@ -60,8 +67,22 @@ class PhotosViewController: UICollectionViewController {
       cell.flash()
     }
     
-    imageManager.requestImage(for: asset, targetSize: view.frame.size, contentMode: .aspectFill, options: nil, resultHandler: { [weak self] image, info in
-      guard let image = image, let info = info else { return }
+    imageManager.requestImage(for: asset,
+                                 targetSize: view.frame.size,
+                                 contentMode: .aspectFill,
+                                 options: nil,
+                                 resultHandler: { [weak self] image, info in
+      guard
+        let image = image,
+        let info = info
+      else {
+        return
+      }
+      
+      if let isThumbnail = info[PHImageResultIsDegradedKey as NSString] as? Bool,
+         !isThumbnail {
+        self?.selectedPhotosSubject.onNext(image)
+      }
       
     })
   }
