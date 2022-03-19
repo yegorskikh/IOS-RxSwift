@@ -5,9 +5,9 @@
 ## Overview
 > Section I: Getting Started with RxSwift
 - Chapter 1: Hello, RxSwift! 
-- Chapter 2: [Observables](https://github.com/yegorskikh/IOS-RxSwift/blob/main/README.md#observables)
-- Chapter 3: Subjects
-- Chapter 4: Observables & Subjects in Practice
+- Chapter 2: [Observables](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%201/02-observable/RxPlayground/RxSwiftPlayground.playground/Pages/Chapter.xcplaygroundpage/Contents.swift)
+- Chapter 3: [Subjects](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%201/03-subjects/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
+- Chapter 4: [Observables & Subjects in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%201/04-observables-in-practice/Combinestagram/Combinestagram)
 <br> </br>
 > Section II: Operators & Best Practices
 - Chapter 5: Filtering Operators
@@ -38,8 +38,3 @@
 > Section VI: Putting It All Together
 - Chapter 24: MVVM with RxSwift.
 - Chapter 25: Building a Complete RxSwift App 
-
-# Overview Extended
-## Observables
-### Key Points 
-- [example](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%201/02-observable-pg/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
