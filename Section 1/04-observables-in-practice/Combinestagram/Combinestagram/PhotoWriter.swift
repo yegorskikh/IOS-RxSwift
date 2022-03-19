@@ -9,8 +9,9 @@ class PhotoWriter {
     case couldNotSavePhoto
   }
   
-  static func save(_ image: UIImage) -> Observable<String> {
-    return Observable.create { observer in
+  static func save(_ image: UIImage) -> Single<String> {
+    return Single.create { event in
+      
       var savedAssetId: String?
       
       PHPhotoLibrary.shared().performChanges({
@@ -21,10 +22,9 @@ class PhotoWriter {
         DispatchQueue.main.async {
           if success,
              let id = savedAssetId {
-            observer.onNext(id)
-            observer.onCompleted()
+            event(.success(id))
           } else {
-            observer.onError(error ?? Errors.couldNotSavePhoto)
+            event(.error(error ?? Errors.couldNotSavePhoto))
           }
         }
       })

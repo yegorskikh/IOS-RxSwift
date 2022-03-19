@@ -68,10 +68,10 @@ class PhotosViewController: UICollectionViewController {
     }
     
     imageManager.requestImage(for: asset,
-                                 targetSize: view.frame.size,
-                                 contentMode: .aspectFill,
-                                 options: nil,
-                                 resultHandler: { [weak self] image, info in
+                              targetSize: view.frame.size,
+                              contentMode: .aspectFill,
+                              options: nil,
+                              resultHandler: { [weak self] image, info in
       guard
         let image = image,
         let info = info
