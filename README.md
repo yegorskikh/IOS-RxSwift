@@ -1,6 +1,7 @@
 # IOS-RxSwift
 
-**RxSwift** - это библиотека для составления асинхронного и основанного на событиях кода с использованием наблюдаемых последовательностей и операторов функционального стиля, что позволяет параметризовать выполнение через планировщики.
+**RxSwift** - is a library for composing asynchronous and event-based code by using observable sequences and functional style operators, allowing for parameterized execution via schedulers.
+
 <br> </br>
 ## Overview
 > Section I: Getting Started with RxSwift
