@@ -13,7 +13,7 @@
 > Section II: Operators & Best Practices
 - Chapter 5: [Filtering Operators](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%202/05-filtering-operators/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
 - Chapter 6: [Filtering Operators in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/06-filtering-operators-in-practice/Combinestagram)
-- Chapter 7: Transforming Operators
+- Chapter 7: [Transforming Operators](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%202/07-transforming-operators/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
 - Chapter 8: Transforming Operators in Practice
 - Chapter 9: Combining Operators
 - Chapter 10: Combining Operators in Practice
