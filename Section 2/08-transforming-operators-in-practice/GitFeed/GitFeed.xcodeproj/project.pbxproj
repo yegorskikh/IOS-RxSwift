@@ -13,7 +13,7 @@
 		9C83327C1DF73BA90067DC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C83327B1DF73BA90067DC80 /* Assets.xcassets */; };
 		9C83327F1DF73BA90067DC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C83327D1DF73BA90067DC80 /* LaunchScreen.storyboard */; };
 		9C8332871DF73BBD0067DC80 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9C8332861DF73BBD0067DC80 /* Podfile */; };
-		9CE37EC71DF73EE300E4E310 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE37EC61DF73EE300E4E310 /* Event.swift */; };
+		9CE37EC71DF73EE300E4E310 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE37EC61DF73EE300E4E310 /* EventModel.swift */; };
 		B185D7C83286B5A5BC375D6A /* Pods_GitFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC59ED1BD08485E5E49189E0 /* Pods_GitFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		9C83327E1DF73BA90067DC80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C8332801DF73BA90067DC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8332861DF73BBD0067DC80 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9CE37EC61DF73EE300E4E310 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		9CE37EC61DF73EE300E4E310 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		DC59ED1BD08485E5E49189E0 /* Pods_GitFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,7 @@
 			children = (
 				9C30C3F71E06FC3900C6C510 /* Assets */,
 				9C8332761DF73BA90067DC80 /* ActivityController.swift */,
-				9CE37EC61DF73EE300E4E310 /* Event.swift */,
+				9CE37EC61DF73EE300E4E310 /* EventModel.swift */,
 				9C8332741DF73BA90067DC80 /* AppDelegate.swift */,
 			);
 			path = GitFeed;
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8332771DF73BA90067DC80 /* ActivityController.swift in Sources */,
-				9CE37EC71DF73EE300E4E310 /* Event.swift in Sources */,
+				9CE37EC71DF73EE300E4E310 /* EventModel.swift in Sources */,
 				9C8332751DF73BA90067DC80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
