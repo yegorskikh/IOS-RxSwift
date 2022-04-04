@@ -370,3 +370,48 @@ example(of: "scan") {
      */
     
 }
+
+// MARK: - Challenge
+
+example(of: "The zip case") {
+    
+    let source = Observable.of(1, 3, 5, 7, 9)
+    
+    let scanObservable = source.scan(0, accumulator: +)
+    let observable = Observable.zip(source, scanObservable)
+    
+    _ = observable.subscribe(onNext: { tuple in
+        print("Source -", tuple.0, "Running total -", tuple.1)
+    })
+    
+    /*
+     Source - 1 Running total - 1
+     Source - 3 Running total - 4
+     Source - 5 Running total - 9
+     Source - 7 Running total - 16
+     Source - 9 Running total - 25
+     */
+    
+}
+
+example(of: "Superior scan") {
+    
+    let source = Observable.of(1, 3, 5, 7, 9)
+    
+    let scanObservable = source.scan((0, 0)) { acc, current in
+        return (current, acc.1 + current)
+    }
+    
+    _ = scanObservable.subscribe(onNext: { tuple in
+        print("Source -", tuple.0, "Running total -", tuple.1)
+    })
+    
+    /*
+     Source - 1 Running total - 1
+     Source - 3 Running total - 4
+     Source - 5 Running total - 9
+     Source - 7 Running total - 16
+     Source - 9 Running total - 25
+     */
+    
+}
