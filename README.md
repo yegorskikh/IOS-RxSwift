@@ -14,9 +14,9 @@
 - Chapter 5: [Filtering Operators](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%202/05-filtering-operators/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
 - Chapter 6: [Filtering Operators in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/06-filtering-operators-in-practice/Combinestagram)
 - Chapter 7: [Transforming Operators](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%202/07-transforming-operators/RxPlayground/RxSwiftPlayground.playground/Contents.swift)
-- Chapter 8: Transforming Operators in Practice
-- Chapter 9: Combining Operators
-- Chapter 10: Combining Operators in Practice
+- Chapter 8: [Transforming Operators in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/08-transforming-operators-in-practice/GitFeed)
+- Chapter 9: [Combining Operators](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%202/09-combining-operators/RxSwiftPlayground/RxSwiftPlayground.playground/Contents.swift)
+- Chapter 10: [Combining Operators in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/10-combining-operators-in-practice/OurPlanet)
 - Chapter 11: Time-Based Operators
 <br> </br>
 > Section III: iOS Apps with RxCocoa 
