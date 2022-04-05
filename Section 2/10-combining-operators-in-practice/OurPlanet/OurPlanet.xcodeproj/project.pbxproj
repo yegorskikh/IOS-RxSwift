@@ -79,6 +79,8 @@
 		3D46E6261E258DFC0090C97B /* OurPlanet */ = {
 			isa = PBXGroup;
 			children = (
+				D8D4B8DAB960CC6D73230C61 /* Model */,
+				975BB57727FCD2BD003DE5F5 /* Service */,
 				3D46E6271E258DFC0090C97B /* AppDelegate.swift */,
 				3D46E6291E258DFC0090C97B /* CategoriesViewController.swift */,
 				D8D4B1AF36E540D16E9AC066 /* EventsViewController.swift */,
@@ -87,7 +89,6 @@
 				3D46E62E1E258DFC0090C97B /* Assets.xcassets */,
 				3D46E6301E258DFC0090C97B /* LaunchScreen.storyboard */,
 				3D46E6331E258DFC0090C97B /* Info.plist */,
-				D8D4B8DAB960CC6D73230C61 /* Model */,
 			);
 			path = OurPlanet;
 			sourceTree = "<group>";
@@ -106,8 +107,15 @@
 				33FD31FBB5A8074AED33F8C0 /* Pods-OurPlanet.debug.xcconfig */,
 				3C7B09A3B9656142757AE986 /* Pods-OurPlanet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		975BB57727FCD2BD003DE5F5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D8D4BAA4F4C10477E0535C81 /* EONET.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D8D4B8DAB960CC6D73230C61 /* Model */ = {
@@ -116,7 +124,6 @@
 				D8D4B16B4BA42E13E4F7DBB2 /* EOCategory.swift */,
 				D8D4BE9443CDA2DB4BF2835C /* EOError.swift */,
 				D8D4B6D93EEB59915317AA1D /* EOEvent.swift */,
-				D8D4BAA4F4C10477E0535C81 /* EONET.swift */,
 				D8D4B8B9345BB7B3111B3486 /* EOLocation.swift */,
 				D8D4B8EF2AD93009A46E705B /* EOEnvelope.swift */,
 			);
@@ -152,7 +159,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					3D46E6231E258DFC0090C97B = {
@@ -305,6 +312,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -364,6 +372,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
