@@ -39,3 +39,8 @@
 > Section VI: Putting It All Together
 - Chapter 24: MVVM with RxSwift.
 - Chapter 25: Building a Complete RxSwift App 
+
+## Notes
+### Recap of Traits in RxSwift and RxCocoa
+<img width="840" alt="Screenshot 2022-04-07 at 01 09 46" src="https://user-images.githubusercontent.com/60622982/162081544-18e5c2bc-4b01-492c-9f3c-1ec0253ade55.png">
+
