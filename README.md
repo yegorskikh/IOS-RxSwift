@@ -17,10 +17,10 @@
 - Chapter 8: [Transforming Operators in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/08-transforming-operators-in-practice/GitFeed)
 - Chapter 9: [Combining Operators](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%202/09-combining-operators/RxSwiftPlayground/RxSwiftPlayground.playground/Contents.swift)
 - Chapter 10: [Combining Operators in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/10-combining-operators-in-practice/OurPlanet)
-- Chapter 11: Time-Based Operators
+- Chapter 11: [Time-Based Operators](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%202/11-time-based-operators/RxSwiftPlayground/RxSwiftPlayground.playground/Pages)
 <br> </br>
 > Section III: iOS Apps with RxCocoa 
-- Chapter 12: Beginning RxCocoa
+- Chapter 12: [Beginning RxCocoa](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%203/12-beginning-rxcocoa/Wundercast/Wundercast)
 - Chapter 13: Intermediate RxCocoa
 <br> </br>
 > Section IV: Intermediate RxSwift/RxCocoa
