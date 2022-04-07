@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -56,12 +56,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-EQ-LgR">
+                                <rect key="frame" x="16" y="64" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jQQ-9b-2rA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Bs-Gm-bwQ"/>
                             <constraint firstItem="jQQ-9b-2rA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="3EQ-YY-BbS"/>
                             <constraint firstItem="fn5-hY-7os" firstAttribute="width" secondItem="jQQ-9b-2rA" secondAttribute="width" id="6Ay-YA-dE9"/>
+                            <constraint firstItem="Z9k-EQ-LgR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="983-rT-3Mk"/>
                             <constraint firstItem="fn5-hY-7os" firstAttribute="centerX" secondItem="jQQ-9b-2rA" secondAttribute="centerX" id="DQs-GR-s4h"/>
                             <constraint firstAttribute="trailing" secondItem="jQQ-9b-2rA" secondAttribute="trailing" constant="32" id="I7g-p4-Sbb"/>
                             <constraint firstItem="x4a-i8-beX" firstAttribute="leading" secondItem="jQQ-9b-2rA" secondAttribute="leading" id="Ice-tx-Qny"/>
@@ -70,6 +74,7 @@
                             <constraint firstItem="jQQ-9b-2rA" firstAttribute="top" secondItem="aYm-dp-fOW" secondAttribute="bottom" constant="8" id="MFT-Kh-TpX"/>
                             <constraint firstItem="fn5-hY-7os" firstAttribute="top" secondItem="jQQ-9b-2rA" secondAttribute="bottom" constant="8" id="Rba-DY-MEe"/>
                             <constraint firstItem="jQQ-9b-2rA" firstAttribute="top" secondItem="x4a-i8-beX" secondAttribute="bottom" constant="8" id="VFJ-kt-pMI"/>
+                            <constraint firstItem="Z9k-EQ-LgR" firstAttribute="top" secondItem="CvG-51-WJq" secondAttribute="bottom" constant="8" symbolic="YES" id="naY-QY-SPA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CvG-51-WJq" secondAttribute="trailing" id="rE1-nx-616"/>
                             <constraint firstItem="jQQ-9b-2rA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="ruZ-Hl-zEh"/>
                             <constraint firstItem="aYm-dp-fOW" firstAttribute="trailing" secondItem="jQQ-9b-2rA" secondAttribute="trailing" id="tOM-kL-ZZw"/>
@@ -80,6 +85,7 @@
                         <outlet property="humidityLabel" destination="aYm-dp-fOW" id="ACB-jg-cWC"/>
                         <outlet property="iconLabel" destination="jQQ-9b-2rA" id="CFl-ge-t02"/>
                         <outlet property="searchCityName" destination="CvG-51-WJq" id="yXf-Qu-AkM"/>
+                        <outlet property="switchMetric" destination="Z9k-EQ-LgR" id="6Vk-Qc-YYd"/>
                         <outlet property="tempLabel" destination="x4a-i8-beX" id="4To-Ng-1e9"/>
                     </connections>
                 </viewController>

@@ -9,49 +9,51 @@ class ViewController: UIViewController {
     @IBOutlet private var humidityLabel: UILabel!
     @IBOutlet private var iconLabel: UILabel!
     @IBOutlet private var cityNameLabel: UILabel!
+    @IBOutlet weak var switchMetric: UISwitch!
     
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         style()
+                
+        let textSearch = searchCityName.rx.controlEvent(.editingDidEndOnExit).asObservable()
+        let temperature = switchMetric.rx.controlEvent(.valueChanged).asObservable()
         
-        ApiController.shared.currentWeather(for: "RxSwift")
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { data in
-                self.tempLabel.text = "\(data.temperature)° C"
-                self.iconLabel.text = data.icon
-                self.humidityLabel.text = "\(data.humidity)%"
-                self.cityNameLabel.text = data.cityName
-            })
-            .disposed(by: bag)
+        let search = Observable
+            .merge(textSearch, temperature)
+            .map { self.searchCityName.text ?? "" }
+            .filter { !$0.isEmpty }
+            .flatMapLatest { text in
+                ApiController.shared
+                    .currentWeather(for: text)
+                    .catchErrorJustReturn(.empty)
+            }
+            .asDriver(onErrorJustReturn: .empty)
         
-        let search = searchCityName.rx
-          .controlEvent(.editingDidEndOnExit)
-          .map { self.searchCityName.text ?? "" }
-          .filter { !$0.isEmpty }
-          .flatMapLatest { text in
-            ApiController.shared
-              .currentWeather(for: text)
-              .catchErrorJustReturn(.empty)
-          }
-          .asDriver(onErrorJustReturn: .empty)
+        search
+            .map { weather in
+            if self.switchMetric.isOn {
+                return "\(Int(Double(weather.temperature) * 1.8 + 32))° F"
+            } else {
+                return "\(weather.temperature)° C"
+            }
+        }
+        .drive(tempLabel.rx.text)
+        .disposed(by: bag)
         
-        search.map { "\($0.temperature)° C" }
-            .drive(tempLabel.rx.text)
-            .disposed(by: bag)
         
         search.map(\.icon)
-            .drive(tempLabel.rx.text)
+            .drive(iconLabel.rx.text)
             .disposed(by: bag)
         
         search.map { "\($0.humidity)%" }
-            .drive(tempLabel.rx.text)
+            .drive(humidityLabel.rx.text)
             .disposed(by: bag)
         
         search.map(\.cityName)
-            .drive(tempLabel.rx.text)
+            .drive(cityNameLabel.rx.text)
             .disposed(by: bag)
     }
     
