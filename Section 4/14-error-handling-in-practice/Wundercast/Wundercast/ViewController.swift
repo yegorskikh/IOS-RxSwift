@@ -1,15 +1,15 @@
 /// Copyright (c) 2020 Razeware LLC
-/// 
+///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-/// 
+///
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-/// 
+///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-/// 
+///
 /// This project and source code may use libraries or frameworks that are
 /// released under various Open-Source licenses. Use of those libraries and
 /// frameworks are governed by their own individual licenses.
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var iconLabel: UILabel!
   @IBOutlet weak var cityNameLabel: UILabel!
 
+  private var cache = [String: Weather]()
   private let bag = DisposeBag()
   private let locationManager = CLLocationManager()
 
@@ -88,13 +89,43 @@ class ViewController: UIViewController {
         .catchErrorJustReturn(.empty)
     }
 
+    let maxAttempts = 4
+
+    let retryHandler: (Observable<Error>) -> Observable<Int> = { e in
+      return e.enumerated().flatMap { attempt, error -> Observable<Int> in
+        if attempt >= maxAttempts - 1 {
+          return Observable.error(error)
+        } else if let casted = error as? ApiController.ApiError, casted == .invalidKey {
+          return ApiController.shared.apiKey
+            .filter { !$0.isEmpty }
+            .map { _ in 1 }
+        }
+        print("== retrying after \(attempt + 1) seconds ==")
+        return Observable<Int>.timer(.seconds(attempt + 1), scheduler: MainScheduler.instance)
+                              .take(1)
+      }
+    }
+
     let searchInput = searchCityName.rx.controlEvent(.editingDidEndOnExit)
       .map { [weak self] _ in self?.searchCityName.text ?? "" }
       .filter { !$0.isEmpty }
 
     let textSearch = searchInput.flatMap { text in
       return ApiController.shared.currentWeather(city: text)
-        .catchErrorJustReturn(.empty)
+        .do(
+          onNext: { [weak self] data in
+            self?.cache[text] = data
+          },
+          onError: { error in
+            DispatchQueue.main.async { [weak self] in
+              guard let self = self else { return }
+              self.showError(error: error)
+            }
+          })
+        .retryWhen(retryHandler)
+        .catchError { [weak self] error in
+          return Observable.just(self?.cache[text] ?? .empty)
+        }
     }
 
     let search = Observable.merge(geoSearch, textSearch)
@@ -168,5 +199,21 @@ class ViewController: UIViewController {
     humidityLabel.textColor = UIColor.cream
     iconLabel.textColor = UIColor.cream
     cityNameLabel.textColor = UIColor.cream
+  }
+
+  private func showError(error e: Error) {
+    guard let e = e as? ApiController.ApiError else {
+      InfoView.showIn(viewController: self, message: "An error occurred")
+      return
+    }
+
+    switch e {
+    case .cityNotFound:
+      InfoView.showIn(viewController: self, message: "City Name is invalid")
+    case .serverFailure:
+      InfoView.showIn(viewController: self, message: "Server error")
+    case .invalidKey:
+      InfoView.showIn(viewController: self, message: "Key is invalid")
+    }
   }
 }
