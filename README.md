@@ -21,10 +21,10 @@
 <br> </br>
 > Section III: iOS Apps with RxCocoa 
 - Chapter 12: [Beginning RxCocoa](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%203/12-beginning-rxcocoa/Wundercast/Wundercast)
-- Chapter 13: Intermediate RxCocoa
+- Chapter 13: [Intermediate RxCocoa](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%203/13-intermediate-rxcocoa/Wundercast/Wundercast)
 <br> </br>
 > Section IV: Intermediate RxSwift/RxCocoa
-- Chapter 14: Error Handling in Practice
+- Chapter 14: [Error Handling in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%204/14-error-handling-in-practice/Wundercast/Wundercast)
 - Chapter 15: Intro to Schedulers
 - Chapter 16: Testing with RxTest
 - Chapter 17: Creating Custom Reactive Extensions
