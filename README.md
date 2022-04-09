@@ -26,7 +26,7 @@
 > Section IV: Intermediate RxSwift/RxCocoa
 - Chapter 14: [Error Handling in Practice](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%204/14-error-handling-in-practice/Wundercast/Wundercast)
 - Chapter 15: [Intro to Schedulers](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%204/15-intro-to-schedulers/Schedulers/Schedulers)
-- Chapter 16: Testing with RxTest
+- Chapter 16: [Testing with RxTest](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%204/16-testing-with-rxtests/Testing/TestingTests)
 - Chapter 17: Creating Custom Reactive Extensions
 <br> </br>
 > Section V: RxSwift Community Cookbook
