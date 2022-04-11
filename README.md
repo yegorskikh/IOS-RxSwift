@@ -37,8 +37,8 @@
 - Chapter 22: [Debugging with RxTimelane](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%205/22-rx-timelane/Combinestagram/Combinestagram)
 - Chapter 23: [RxAlamofire](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%205/23-rx-alamofire/RxAlamofire.swift)
 > Section VI: Putting It All Together
-- Chapter 24: MVVM with RxSwift.
-- Chapter 25: Building a Complete RxSwift App 
+- Chapter 24: [MVVM with RxSwift](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%206/24-mvvm-with-rxswift/Tweetie)
+- Chapter 25: [Building a Complete RxSwift App](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%206/25-building-complete-rxswift-app/QuickTodo) 
 
 ## Notes
 ### Recap of Traits in RxSwift and RxCocoa
