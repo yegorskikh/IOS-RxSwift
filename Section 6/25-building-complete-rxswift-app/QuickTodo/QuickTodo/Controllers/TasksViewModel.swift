@@ -6,6 +6,7 @@ import Action
 typealias TaskSection = AnimatableSectionModel<String, TaskItem>
 
 struct TasksViewModel {
+  
   let sceneCoordinator: SceneCoordinatorType
   let taskService: TaskServiceType
   
@@ -69,7 +70,6 @@ struct TasksViewModel {
     }
   }
   
-  // Challenge 3: Modify edit action
   lazy var editAction: Action<TaskItem, Swift.Never> = { this in
     return Action { task in
       let editViewModel = PushedEditTaskViewModel(
