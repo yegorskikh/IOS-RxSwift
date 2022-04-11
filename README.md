@@ -30,12 +30,12 @@
 - Chapter 17: [Creating Custom Reactive Extensions](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%204/17-creating-custom-reactive-extension/iGif)
 <br> </br>
 > Section V: RxSwift Community Cookbook
-- Chapter 18: Table & Collection Views
-- Chapter 19: RxSwiftExt
-- Chapter 20: Action 
-- Chapter 21: RxGesture
-- Chapter 22: Debugging with RxTimelane
-- Chapter 23: RxAlamofire
+- Chapter 18: [Table & Collection Views](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%205/18-table-collection-views/TableAndCollectionView.swift)
+- Chapter 19: [RxSwiftExt](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%205/19-rx-swift-ext/RxSwiftExt.swift)
+- Chapter 20: [Action](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%205/20-action/action.swift)
+- Chapter 21: [RxGesture](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%205/21-rx-gesture/rx-gesture.swift)
+- Chapter 22: [Debugging with RxTimelane](https://github.com/yegorskikh/IOS-RxSwift/tree/main/Section%205/22-rx-timelane/Combinestagram/Combinestagram)
+- Chapter 23: [RxAlamofire](https://github.com/yegorskikh/IOS-RxSwift/blob/main/Section%205/23-rx-alamofire/RxAlamofire.swift)
 > Section VI: Putting It All Together
 - Chapter 24: MVVM with RxSwift.
 - Chapter 25: Building a Complete RxSwift App 
